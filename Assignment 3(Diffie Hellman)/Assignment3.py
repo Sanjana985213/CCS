@@ -1,0 +1,16 @@
+p=int(input("Enter the prime number(p)"))
+print("The value of P is",p)
+q=int(input("Enter the primitive root(q)"))
+print("The value of q is",q)
+#senders private key
+a = int(input("Enter the private key for Sender: "))
+print("The private key a for Sender:", a)
+x = (q**a%p)
+b=int(input("Enter the private key for receiver"))
+print("The private key for receiver:",b) 
+y=(q**b%p) 
+ka=(y**a%p)
+print("The secret key for sender is",ka)
+kb=(x**b%p)
+print("The secret key for receiver is",kb)
+

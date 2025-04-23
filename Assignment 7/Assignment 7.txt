@@ -1,0 +1,26 @@
+Microsoft Windows [Version 10.0.26100.3476]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sanja\Downloads\john-1.9.0-jumbo-1-win64\john-1.9.0-jumbo-1-win64\run>zip2john.exe test.zip > ziphash.txt
+ver 2.0 test.zip/test.txt PKZIP Encr: cmplen=23, decmplen=11, crc=8BD69E52
+
+C:\Users\sanja\Downloads\john-1.9.0-jumbo-1-win64\john-1.9.0-jumbo-1-win64\run>john.exe ziphash.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 12 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Warning: Only 1 candidate buffered for the current salt, minimum 12 needed for performance.
+Warning: Only 10 candidates buffered for the current salt, minimum 12 needed for performance.
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Warning: Only 9 candidates buffered for the current salt, minimum 12 needed for performance.
+Proceeding with wordlist:password.lst, rules:Wordlist
+letmein          (test.zip/test.txt)
+1g 0:00:00:00 DONE 2/3 (2025-04-23 00:14) 4.032g/s 185052p/s 185052c/s 185052C/s 123456..MATT
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+
+C:\Users\sanja\Downloads\john-1.9.0-jumbo-1-win64\john-1.9.0-jumbo-1-win64\run>john.exe --show ziphash.txt
+test.zip/test.txt:letmein:test.txt:test.zip::test.zip
+
+1 password hash cracked, 0 left
